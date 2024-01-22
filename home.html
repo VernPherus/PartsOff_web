@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
     <link rel="stylesheet" href="css/custom.min.css">
     <link rel="stylesheet" href="css/background.css">
     <link rel="stylesheet" href="css/profile.css">
@@ -14,39 +15,51 @@
 
 
    <!-- Navigation Section -->
-   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" href="#">
-            <img src="img/placeholder_logo.png" width="40" height="40" alt="">
-            <span class="fw-bold text-secondary">
-                Parts Off
-            </span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="home.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="cart.html">Cart</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="login.html">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="signup.html">Sign Up</a>
-                </li>
-                <form class="my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <!--logo-->
+            <a class="navbar-brand mr-auto" href="home.html">
+                <img src="img/logo.png" width="50" height="50" alt="">
+                <span class="fw-bold text-secondary">
+                    Parts Off
+                </span>
+            </a>
+
+            <!-- Toggle button for small screens -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!--search-->
+                <form class="d-flex mx-auto">
+                    <input class="form-control" type="search" placeholder="Search" aria-label="Search" size="70">
                 </form>
-              
-            </ul>
+
+                <ul class="navbar-nav ms-auto">
+                    <!--Cart-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">Cart</a>
+                    </li>
+
+                    <!--Profile-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Profile
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="MyAccount.html">Profile</a>
+                            <a class="dropdown-item" href="login.html">Login</a>
+                            <a class="dropdown-item" href="signup.html">Sign Up</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div> 
-</nav>  
+    </nav>
+
+
+
 
 
     <!-- Header Section -->
