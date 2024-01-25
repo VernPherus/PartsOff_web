@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/home', function(){
+Route::get('/', function(){
     return view('home');
 });
 
@@ -53,6 +53,15 @@ Route::get('/myaccount', function(){
 Route::get('/checkout', function(){
     return view('checkout');
 });
+
+Route::get('/product', function(){
+    return view('product');
+});
+
+Route::get('/signup', function(){
+    return view('signup');
+});
+
 
 
 
