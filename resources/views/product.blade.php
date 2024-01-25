@@ -1,49 +1,16 @@
+@extends("layout.layout")
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/custom.min.css">
-    <link rel="stylesheet" href="css/background.css">
     <title>Parts Off</title>
 </head>
 
 <body>
-
-    <!-- Navigation Section -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-                <!--logo-->
-                <a class="navbar-brand mr-auto" href="home.html">
-                    <img src="img/logo.png" width="50" height="50" alt="">
-                    <span class="fw-bold text-secondary">
-                        Parts Off
-                    </span>
-                </a>
-                <!--search-->
-                <form class="d-flex mx-auto">
-                    <input class="form-control" type="search" placeholder="Search" aria-label="Search" size="70">
-                </form>
-                <ul class="navbar-nav ms-auto">
-                    <!--Cart-->
-                    <li class="nav-item">
-                        <a class="nav-link" href="cart.html">Cart</a>
-                    </li>
-                    <!--Profile-->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Profile
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="profilesdash.html">Profile</a>
-                            <a class="dropdown-item" href="login.html">Login</a>
-                            <a class="dropdown-item" href="signup.html">Sign Up</a>
-                        </div>
-                    </li>
-                </ul>
-        </div> 
-    </nav>
-
+    <!--Navbar-->
+    @include("layout.navbar")
+    
     <!-- Product Details Section -->
     <div class="container mt-5" id="product-details">
         <div class="row justify-content-md-center">
@@ -58,7 +25,8 @@
                         <p class="card-text">Good GPU</p>
                         <!-- Add more product details as needed -->
                         <button class="btn btn-primary mt-3" onclick="addToCart()">Add to Cart</button>
-                        <button class="btn btn-primary mt-3" onclick="document.location='Checkout.html'">Buy Now</button>
+                        <a href="{{ url('/checkout')  }}"><button class="btn btn-primary mt-3">Buy Now</button></a>
+                        
                     </div>
                 </div>
             </div>
@@ -107,12 +75,8 @@
         </div>
     </div>
 
-    <!-- Footer Section -->
-    <footer class="bg-dark text-white py-3">
-        <div class="container text-center">
-            <p>&copy; 2024 Turd:Re. All rights reserved.</p>
-        </div>
-    </footer>
+    <!--footer-->
+    @include('layout.footer')
 
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </body>

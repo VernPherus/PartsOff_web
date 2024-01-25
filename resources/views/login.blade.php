@@ -1,46 +1,16 @@
+@extends("layout.layout")
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('assets\css\custom.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets\css\background.css') }}">
     <title>Parts Off</title>
 
 </head>
 
 <body class="bg-primary">
-    <!-- Navigation Section -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <!--logo-->
-            <img src="{{ asset('assets\images\logo.png') }}" width="50" height="50" alt="">
-                <span class="fw-bold text-secondary">
-                    Parts Off
-                </span>
-            </a>
-
-            <!-- Toggle button for small screens -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <!--search-->
-
-
-                <ul class="navbar-nav ms-auto">
-
-
-                    <!--Profile-->
-
-                        </a>
-
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <!--Navbar-->
+    @include("layout.navbar")
 
     <section style ="margin-bottom: 369px;">
         <div class="container mt-5 pt-5">
@@ -70,12 +40,8 @@
         </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer class="bg-dark text-white py-3">
-        <div class="container text-center">
-            <p>&copy; 2024 Turd:Re. All rights reserved.</p>
-        </div>
-    </footer>
+    <!--footer-->
+    @include('layout.footer')
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 
 </body>
