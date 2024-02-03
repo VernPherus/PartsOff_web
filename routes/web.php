@@ -22,10 +22,6 @@ Route::get('/login', function(){
     return view('login');
 });
 
-Route::get('/dashboard', function(){
-    return view('dashboard');
-});
-
 Route::get('/cart', function(){
     return view('cart');
 });
@@ -34,33 +30,58 @@ Route::get('/checkout', function(){
     return view('checkout');
 });
 
-Route::get('/order', function(){
-    return view('order');
+Route::get('/admin_dashboard', function(){
+    return view('admin_dashboard');
 });
 
-Route::get('/myproduct', function(){
-    return view('myproduct');
+Route::get('/admin_sellerdatabse', function(){
+    return view('admin_sellerdatabase');
 });
 
-Route::get('/myorder', function(){
-    return view('myorder');
+Route::get('/admin_userdatabase', function(){
+    return view('admin_userdatabase');
 });
 
-Route::get('/myaccount', function(){
-    return view('myaccount');
+Route::get('/myacc_order', function(){
+    return view('myacc_order');
 });
 
-Route::get('/checkout', function(){
-    return view('checkout');
+Route::get('/myacc_profile', function(){
+    return view('myacc_profile');
 });
 
-Route::get('/product', function(){
-    return view('product');
+Route::get('/myacc_changepass', function(){
+    return view('myacc_changepass');
 });
 
-Route::get('/signup', function(){
-    return view('signup');
+Route::get('/myacc_payment', function(){
+    return view('myacc_payment');
 });
+
+Route::get('/shop_dashboard', function(){
+    return view('shop_dashboard');
+});
+
+Route::get('/shop_order', function(){
+    return view('shop_order');
+});
+
+Route::get('/shop_product', function(){
+    return view('shop_product');
+});
+
+Route::get('/shop_profile', function(){
+    return view('shop_profile');
+});
+
+Route::get('/shop_signup', function(){
+    return view('shop_signup');
+});
+
+Route::get('/shop_change', function(){
+    return view('shop_change');
+});
+
 
 
 
