@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <!--logo-->
-            <a class="navbar-brand mr-auto" href="{{ url('/home')  }}">
+            <a class="navbar-brand mr-auto" href="{{ url('/')  }}">
                 <img src="{{ asset('assets\images\logo.png') }}" width="50" height="50" alt="">
                 <span class="fw-bold text-secondary">
                     Parts Off
@@ -25,8 +25,17 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/cart')  }}">Cart</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/myaccount')  }}">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/signup')  }}">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/login')  }}">Login</a>
+                    </li>
 
-                    <!--Profile-->
+                    <!--Profile
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Profile
@@ -36,7 +45,7 @@
                             <a class="dropdown-item" href="login.html">Login</a>
                             <a class="dropdown-item" href="signup.html">Sign Up</a>
                         </div>
-                    </li>
+                    </li>-->
                 </ul>
             </div>
         </div>
