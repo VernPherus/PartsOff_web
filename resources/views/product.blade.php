@@ -10,7 +10,7 @@
 <body>
     <!--Navbar-->
     @include("layout.navbar")
-    
+
     <!-- Product Details Section -->
     <div class="container mt-5" id="product-details">
         <div class="row justify-content-md-center">
@@ -26,7 +26,7 @@
                         <!-- Add more product details as needed -->
                         <button class="btn btn-primary mt-3" onclick="addToCart()">Add to Cart</button>
                         <a href="{{ url('/checkout')  }}"><button class="btn btn-primary mt-3">Buy Now</button></a>
-                        
+
                     </div>
                 </div>
             </div>
@@ -43,7 +43,7 @@
                                 <div class="card-body">
                                     <h6 class="card-title">Jeremy Aldana</h6>
                                     <p class="card-text">
-                                        "I bought this graphics card last month, and it's been performing exceptionally well. 
+                                        "I bought this graphics card last month, and it's been performing exceptionally well.
                                         The gaming experience has improved, and the price is reasonable for the features it offers."
                                     </p>
                                     <p class="card-text text-muted">Posted on January 20, 2024</p>
@@ -77,7 +77,7 @@
 
     <!--footer-->
     @include('layout.footer')
-
+4
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </body>
 </html>
