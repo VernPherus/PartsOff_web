@@ -3,6 +3,30 @@
 $primary : #540655;
 $secondary : #C5C6C7;
 
+.sidebar {
+    background-color: #343a40; /* Dark background color */
+    color: #ffffff; /* Text color */
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 
+.profile-card {
+    border: 2px solid #ffffff; /* Border color for the profile card */
+    border-radius: 15px; /* Rounded corners for the profile card */
+}
+
+.profile-card h2 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    color: #ffffff; /* Text color for the profile details */
+}
+
+.list-group a {
+    color: #ffffff; /* Text color for the links in the list group */
+}
+
+.list-group a:hover {
+    background-color: #555555; /* Background color on hover for the links in the list group */
+}
 
 @import "../node_modules/bootstrap/scss/bootstrap"
