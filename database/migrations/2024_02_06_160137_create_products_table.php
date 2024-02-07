@@ -23,8 +23,8 @@ return new class extends Migration
             $table->string('status');
             $table->decimal('price', 10, 2);
             $table->morphs('tags');
-            $table->integer('created_by');
-            $table->integer('updated_by');
+            $table->string('created_by', );
+            $table->string('updated_by');
             $table->timestamps();
         });
     }
