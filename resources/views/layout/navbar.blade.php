@@ -1,13 +1,16 @@
 <!-- Navigation Section -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py--2">
     <div class="container">
-        <!-- Logo -->
-        <a class="navbar-brand mr-auto" href="{{ url('/') }}">
-            <img src="{{ asset('assets\images\logo.png') }}" width="50" height="50" alt="">
-            <span class="fw-bold text-secondary">
+        <!-- Brand (left) -->
+        <a class="navbar-brand" href="{{ url('/') }}">
+            <div class="brand-box">
+                <img src="{{ asset('assets\images\logo.png') }}" width="50" height="50" alt="">
+            </div>
+            <span class="fw-bold text-light">
                 Parts Off
             </span>
         </a>
+
 
         <!-- Toggle button for small screens -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,29 +18,33 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
-            <!-- Search -->
-            <form class="d-flex mx-auto">
-                <input class="form-control" type="search" placeholder="Search" aria-label="Search" size="70">
+            <!-- Search (center) -->
+            <form class="d-flex mx-auto my-2">
+                <div class="input-group">
+                    <input class="form-control" type="search" placeholder="Search" aria-label="Search" style="width: 400;" alt="search"> <!-- Adjust the width as needed -->
+                    <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
+                </div>
             </form>
 
-            <!-- Navbar Items -->
-            <ul class="navbar-nav ms-auto">
-                <!-- Cart -->
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/cart') }}">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
-                        </svg>
-                    </a>
-                </li>
+            <!-- Navbar Items (right) -->
+            <div class="d-flex justify-content-center">
+                <ul class="navbar-nav">
+                    <!-- Cart -->
+                    <li class="nav-item d-flex justify-content-center">
+                        <a class="nav-link" href="{{ url('/cart') }}">
+                            <i class="bi bi-cart2" style="font-size: 2rem;"></i> <!-- Adjust the font-size as needed -->
+                        </a>
+                    </li>
 
-                <!-- My Account Button -->
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/login') }}">
-                        <button type="button" class="btn btn-outline-primary">Login/SignUp</button>
-                    </a>
-                </li>
-            </ul>
+                    <!-- Login/SignUp Button -->
+                    <li class="nav-item d-flex justify-content-center">
+                        <a class="nav-link" href="{{ url('/login') }}">
+                            <button type="button" class="btn btn-outline-primary">Login/SignUp</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </nav>
+

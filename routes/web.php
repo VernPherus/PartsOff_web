@@ -23,7 +23,7 @@ Route::get('/admin_dashboard', function(){
 });
 
 Route::get('/admin_userdatabse', function(){
-    return view('admin_dashboard');
+    return view('admin_userdatabase');
 });
 
 Route::get('/cart', function(){
@@ -73,4 +73,3 @@ Route::get('/user_profile', function(){
 Route::get('/user_shipping', function(){
     return view('user_shipping');
 });
-
