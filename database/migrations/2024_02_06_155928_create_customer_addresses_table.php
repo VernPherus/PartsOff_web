@@ -15,6 +15,12 @@ return new class extends Migration
     {
         Schema::create('customer_addresses', function (Blueprint $table) {
             $table->id();
+            $table->string('address1');
+            $table->string('address2');
+            $table->string('city');
+            $table->string('province');
+            $table->string('zipcode', 45);
+            $table->foreign('customer_id')->references('id')->on('customers')->onDelete('cascade');
             $table->timestamps();
         });
     }
