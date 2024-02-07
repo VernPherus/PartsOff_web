@@ -12,4 +12,15 @@ class CartItem extends Model
     protected $fillable=[
         "quantity"
     ];
+
+    /**
+     * Get the user that owns the CartItem
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function customer(): BelongsTo
+    {
+        return $this->belongsTo(Customer::class);
+    }
+
 }

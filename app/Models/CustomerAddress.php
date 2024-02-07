@@ -16,4 +16,15 @@ class CustomerAddress extends Model
         "province",
         "zipcode"
     ];
+
+    /**
+     * Get the user that owns the CustomerAddress
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function customer(): BelongsTo
+    {
+        return $this->belongsTo(Customer::class);
+    }
+
 }

@@ -16,4 +16,25 @@ class OrderDetail extends Model
         "address1",
         "address2"
     ];
+
+    /**
+     * Get all of the comments for the OrderDetail
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function order_items(): HasMany
+    {
+        return $this->hasMany(OrderItems::class, 'order_item', 'id');
+    }
+
+    /**
+     * Get the user that owns the OrderDetail
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function order(): BelongsTo
+    {
+        return $this->belongsTo(Order::class);
+    }
+
 }

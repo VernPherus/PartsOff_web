@@ -18,8 +18,9 @@ return new class extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('gender');
+            $table->bigInteger('created_by')->unsigned();
             $table->foreign('created_by')->references('id')->on('users');
-            $table->foreign('updated_by')->references('id')->on('users');
+            $table->$table->bigInteger('updated_by');
             $table->timestamps();
         });
     }

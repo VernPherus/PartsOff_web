@@ -13,4 +13,25 @@ class Order extends Model
         "total_price",
         "status"
     ];
+
+    /**
+     * Get the user associated with the Order
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function order_detail(): HasOne
+    {
+        return $this->hasOne(OrderDetail::class, 'order_id', 'id');
+    }
+
+    /**
+     * Get the user that owns the Order
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function customer(): BelongsTo
+    {
+        return $this->belongsTo(Customer::class);
+    }
+
 }

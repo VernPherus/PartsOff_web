@@ -12,4 +12,19 @@ class OrderItem extends Model
     protected $fillable=[
         "quantity"
     ];
+
+    /**
+     * Get the user that owns the OrderItem
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function order_details(): BelongsTo
+    {
+        return $this->belongsTo(OrderDetails::class);
+    }
+
+    public function product(): BelongsTo
+    {
+        return $this->belongsTo(Product::class);
+    }
 }
