@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('user_type', 25)->default('CUSTOMER');
             $table->string('password');
+            $table->string('user_type', 45)->default('CUSTOMER');
             $table->rememberToken();
             $table->timestamps();
         });

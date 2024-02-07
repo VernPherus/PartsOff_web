@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('city');
             $table->string('province');
             $table->string('zipcode', 45);
-            $table->foreign('customer_id')->references('id')->on('customers')->onDelete('cascade');
+            $table->foreign('customer_id')->references('id')->on('customers');
             $table->timestamps();
         });
     }

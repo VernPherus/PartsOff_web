@@ -22,7 +22,9 @@ return new class extends Migration
             $table->longText('description');
             $table->string('status');
             $table->decimal('price', 10, 2);
-            $table->taggable();
+            $table->morphs('tags');
+            $table->integer('created_by');
+            $table->integer('updated_by');
             $table->timestamps();
         });
     }
