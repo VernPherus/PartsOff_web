@@ -17,7 +17,8 @@ return new class extends Migration
             $table->id();
             $table->decimal('total_price', 10, 2);
             $table->string('status', 45);
-            $table->integer('created_by');
+            $table->bigInteger('created_by')->unsigned();
+            $table->foreign('created_by')->references('id')->on('customers');
             $table->integer('updated_by');
             $table->timestamps();
         });

@@ -23,8 +23,9 @@ return new class extends Migration
             $table->string('status');
             $table->decimal('price', 10, 2);
             $table->morphs('tags');
-            $table->integer('created_by');
-            $table->integer('updated_by');
+            $table->bigInteger('created_by')->unsigned();
+            $table->foreign('created_by')->references('id')->on('admins');
+            $table->bigInteger('updated_by');
             $table->timestamps();
         });
     }

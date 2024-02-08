@@ -8,4 +8,25 @@ use Illuminate\Database\Eloquent\Model;
 class CustomerAddress extends Model
 {
     use HasFactory;
+
+    protected $fillable=[
+        "address1",
+        "address2",
+        "city",
+        "province",
+        "zipcode"
+    ];
+
+    /**
+     * Get the user that owns the CustomerAddress
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+
+    //customer address belongs to one customer_address
+    public function customer(): BelongsTo
+    {
+        return $this->belongsTo(Customer::class);
+    }
+
 }

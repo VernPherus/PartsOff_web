@@ -20,6 +20,8 @@ return new class extends Migration
             $table->string('email', 45);
             $table->string('address1', 45);
             $table->string('address2', 45);
+            $table->bigInteger('order_id');
+            $table->foreign('order_id')->references('id')->on('orders');
             $table->timestamps();
         });
     }
