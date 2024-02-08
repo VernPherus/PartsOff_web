@@ -30,11 +30,14 @@ class Customer extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
+
+    //* Customer has many cart items
     public function cart_items(): HasMany
     {
         return $this->hasMany(CartItems::class, 'customer_id', 'id');
     }
 
+    //* Customer has many orders
     public function orders(): HasMany
     {
         return $this->hasMany(Orders::class, 'customer_id', 'id');
@@ -45,6 +48,8 @@ class Customer extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
+
+    //* Customer belongs to one user
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);

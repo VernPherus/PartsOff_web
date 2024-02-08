@@ -19,6 +19,8 @@ class Order extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
+
+    //* Order has one order detail.
     public function order_detail(): HasOne
     {
         return $this->hasOne(OrderDetail::class, 'order_id', 'id');
@@ -29,6 +31,8 @@ class Order extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
+
+    //* Order belongs to one customer
     public function customer(): BelongsTo
     {
         return $this->belongsTo(Customer::class);

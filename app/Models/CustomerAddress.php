@@ -22,6 +22,8 @@ class CustomerAddress extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
+
+    //customer address belongs to one customer_address
     public function customer(): BelongsTo
     {
         return $this->belongsTo(Customer::class);

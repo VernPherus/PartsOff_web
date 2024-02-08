@@ -13,6 +13,8 @@ class Admin extends Model
         "username"
     ];
 
+
+    //admin has many products
     /**
      * Get all of the comments for the Admin
      *

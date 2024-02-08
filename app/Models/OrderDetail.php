@@ -22,6 +22,8 @@ class OrderDetail extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
+
+    //* Order Details has many items
     public function order_items(): HasMany
     {
         return $this->hasMany(OrderItems::class, 'order_item', 'id');
@@ -32,6 +34,8 @@ class OrderDetail extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
+
+    //order details belong to one order
     public function order(): BelongsTo
     {
         return $this->belongsTo(Order::class);
