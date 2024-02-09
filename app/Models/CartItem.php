@@ -19,7 +19,7 @@ class CartItem extends Model
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
 
-    //cart item belongs to cutomer class
+    //*Cart item belongs to customer
     public function customer(): BelongsTo
     {
         return $this->belongsTo(Customer::class);
