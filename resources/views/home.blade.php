@@ -1,9 +1,5 @@
 @extends("layout.layout")
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parts Off</title>
 </head>
 
@@ -162,6 +158,4 @@
 
     <!--footer-->
     @include('layout.footer')
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </body>
-</html>

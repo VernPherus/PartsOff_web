@@ -1,12 +1,46 @@
 @extends("layout.layout")
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parts Off</title>
-</head>
+  <title>Your Product Name - Shoppe Style</title>
+  <style>
+        .checkout-card {
+            width: 100%;
+            margin: auto;
+            display: flex;
+        }
 
+        .cart-items {
+            flex: 1;
+            padding-right: 20px; /* Spacing between items and summary */
+        }
+
+        .item-image {
+            max-width: 50px;
+            max-height: 50px;
+            margin-right: 10px;
+        }
+
+        .list-group-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+
+        }
+
+        .total {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .checkout-btn {
+            margin-top: 20px;
+        }
+
+        .summary {
+            width: 100%;
+        }
+    </style>
+</head>
 <body>
     <!--Navbar-->
     @include("layout.navbar")
@@ -28,6 +62,13 @@
                         <a href="{{ url('/checkout')  }}"><button class="btn btn-primary mt-3">Buy Now</button></a>
 
                     </div>
+
+                    <a class="nav-link" href="{{ url('/cart') }}">
+                        <button class="btn btn-primary btn-block">Add to Cart</button>
+                    </a>
+                    <a class="nav-link" href="{{ url('/checkout') }}">
+                        <button class="btn btn-primary btn-block">Buy Now</button>
+                    </a>
                 </div>
             </div>
 
@@ -74,10 +115,11 @@
             </div>
         </div>
     </div>
-
-    <!--footer-->
     @include('layout.footer')
-4
+
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </body>
-</html>
+
+
+
+

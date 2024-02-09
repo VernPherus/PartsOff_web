@@ -1,0 +1,35 @@
+.brand-box {
+    display: inline-block;
+    padding: 15px; /* Adjust padding as needed */
+    border-radius: 50%; /* Adjust border-radius as needed */
+    background-color: #f8f9fa; /* Adjust background color as needed */
+    object-fit: cover;
+}
+
+.brand-box img {
+    width: 50px; /* Adjust the width of the image */
+    height: 50px; /* Adjust the height of the image */
+}
+
+
+@media (max-width: 767px) {
+    .search {
+        width: 100%; /* Full width for mobile */
+        margin-bottom: 10px; /* Add some space below for mobile */
+    }
+
+    .btn {
+        width: 100%; /* Full width for mobile */
+    }
+}
+
+/* Media query for desktop devices */
+@media (min-width: 768px) {
+    .search {
+        width: 200px; /* Adjust the width as needed for desktop */
+    }
+
+    .btn {
+        width: auto; /* Auto width for desktop */
+    }
+}

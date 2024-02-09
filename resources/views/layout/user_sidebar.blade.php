@@ -6,28 +6,30 @@
                         <div class="card profile-card">
                             <div class="card-body text-center">
                                 <div class="row justify-content-center">
-                                    <div class="mb-5">
-                                        <!-- Profile Picture -->
-                                        <div class="profile-pic-container d-flex justify-content-center">
-                                            <img src="{{ asset('assets\images\alex.jpg') }}" alt="Profile Picture" class="profile-img">
-                                        </div>
+                                    <div class="mb-3">
                                         <!-- Profile Details -->
-                                        <h6>Adrian James Naoe Bumagat</h6>
+                                        <h2>Adrian James Bumagat</h2>
                                     </div>
                                     <!-- DashBoard -->
                                     <div class="col-12 mb-4">
-                                        <div class="list-group">
-                                            <a href="{{ url('/myaccount')  }}" class="list-group-item list-group-item-action">My Account</a>
-                                            <a href="{{ url('/myaccount')  }}" class="list-group-item list-group-item-action">Profile</a>
-                                            <a href="{{ url('/myorder')  }}" class="list-group-item list-group-item-action"> Change Password</a>
-                                            <a href="{{ url('/myorder')  }}" class="list-group-item list-group-item-action"> Payment Method</a>
-                                            <a href="{{ url('/myorder')  }}" class="list-group-item list-group-item-action"> My Orders</a>
-                                            <a href="{{ url('/myorder')  }}" class="list-group-item list-group-item-action"> Orders</a>
-                                            <a href="{{ url('/')  }}" class="list-group-item list-group-item-action"> LogOut</a>
+                                        <div class="list-group list-group-flush mb-3">
+                                            <a class="list-group-item"><h4>My Account</h4></a>
+                                            <a class="list-group-item" href="{{ url('/user_profile')  }}" > Account Detail</a>
+                                            <a class="list-group-item" href="{{ url('/user_changepass')  }}" > Change Password</a>
+                                            <a class="list-group-item" href="{{ url('/user_shipping')  }}" > Shipping Address</a>
                                         </div>
+
+                                        <div class="list-group list-group-flush mb-3">
+                                            <a class="list-group-item"><h4>Products</h4></a>
+                                            <a class="list-group-item" href="{{ url('/user_order')  }}">Order History</a>
+                                        </div>
+                                        <a class="nav-link" href="{{ url('/') }}">
+                                            <button type="button" class="btn btn-outline-dark">LogOut</button>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                
