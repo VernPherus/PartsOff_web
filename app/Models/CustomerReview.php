@@ -6,24 +6,24 @@ use App\Models\Customer;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class CartItem extends Model
+class CustomerReview extends Model
 {
     use HasFactory;
 
-    protected $fillable=[
-        "quantity"
+    protected $fillable = [
+        "first_name",
+        "last_name",
+        "rate",
+        "description",
     ];
 
     /**
-     * Get the user that owns the CartItem
+     * Get the user that owns the CustomerReview
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-
-    //*Cart item belongs to customer
     public function customer(): BelongsTo
     {
         return $this->belongsTo(Customer::class);
     }
-
 }

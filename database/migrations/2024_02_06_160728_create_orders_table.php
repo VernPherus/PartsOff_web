@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\User;
+use App\Models\Customer;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -18,8 +18,8 @@ return new class extends Migration
             $table->id();
             $table->decimal('total_price', 10, 2);
             $table->string('status', 45);
-            $table->foreignIdFor(User::class, 'created_by')->nullable();
-            $table->foreignIdFor(User::class, 'updated_by')->nullable();
+            $table->foreignIdFor(Customer::class, 'created_by')->nullable();
+            $table->foreignIdFor(Customer::class, 'updated_by')->nullable();
             $table->timestamps();
         });
     }

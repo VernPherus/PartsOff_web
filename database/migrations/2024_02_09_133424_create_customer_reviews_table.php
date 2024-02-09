@@ -14,11 +14,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('cart_items', function (Blueprint $table) {
+        Schema::create('customer_reviews', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(Customer::class, 'user_id');
-            $table->foreignId('product_id')->references('id')->on('products');
-            $table->integer('quantity');
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->decimal('rate', 10, 2);
+            $table->longText('description');
+            $table->foreignIdFor(Customer::class, 'created_by')->nullable();
+            $table->foreignIdFor(Customer::class, 'updated_by')->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cart_items');
+        Schema::dropIfExists('customer_reviews');
     }
 };
