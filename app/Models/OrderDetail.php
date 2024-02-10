@@ -3,6 +3,9 @@
 namespace App\Models;
 
 use App\Models\Order;
+use App\Models\OrderItem;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -27,7 +30,7 @@ class OrderDetail extends Model
     //* Order Details has many items
     public function order_items(): HasMany
     {
-        return $this->hasMany(OrderItems::class, 'order_item', 'id');
+        return $this->hasMany(OrderItem::class, 'order_item', 'id');
     }
 
     /**
