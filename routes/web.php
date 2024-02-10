@@ -23,15 +23,15 @@ Route::get('/admin_dashboard', function(){
 });
 
 Route::get('/admin_userdatabse', function(){
-    return view('admin_userdatabase');
+    return view('Admin/admin_userdatabase');
 });
 
 Route::get('/cart', function(){
     return view('cart');
 });
 
-Route::get('/cart', function(){
-    return view('cart');
+Route::get('/product', function(){
+    return view('product');
 });
 
 Route::get('/checkout', function(){

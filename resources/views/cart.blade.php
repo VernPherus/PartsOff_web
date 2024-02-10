@@ -1,4 +1,5 @@
 @extends("layout.layout")
+@section('content')
 <head>
     <title>Checkout</title>
     <style>
@@ -131,9 +132,6 @@
             </div>
     </div>
 
-    <!--footer-->
-    @include("layout.footer")
-
     <script>
         // Function to remove item (update as per your requirements)
         function removeItem(itemId) {
@@ -141,6 +139,11 @@
             console.log('Item removed:', itemId);
         }
     </script>
-    
+
 </body>
+
+    <!--footer-->
+    @include("layout.footer")
+
 </html>
+@stop
