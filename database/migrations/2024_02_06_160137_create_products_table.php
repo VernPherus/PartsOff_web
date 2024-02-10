@@ -23,7 +23,6 @@ return new class extends Migration
             $table->integer('image_size')->nullable();
             $table->longText('description')->nullable();
             $table->decimal('price', 10, 2);
-            $table->morphs('tags');
             $table->foreignIdFor(Admin::class, 'created_by')->nullable();
             $table->foreignIdFor(Admin::class, 'updated_by')->nullable();
             $table->softDeletes();

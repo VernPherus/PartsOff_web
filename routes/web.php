@@ -31,15 +31,15 @@ Route::get('/checkout', function(){
 });
 
 Route::get('/admin_dashboard', function(){
-    return view('admin_dashboard');
+    return view('Admin/admin_dashboard');
 });
 
-Route::get('/admin_sellerdatabse', function(){
-    return view('admin_sellerdatabase');
-});
+// Route::get('/admin_sellerdatabse', function(){
+//     return view('Admin/admin_sellerdatabase');
+// });
 
 Route::get('/admin_userdatabase', function(){
-    return view('admin_userdatabase');
+    return view('Admin/admin_userdatabase');
 });
 
 Route::get('/myacc_order', function(){
