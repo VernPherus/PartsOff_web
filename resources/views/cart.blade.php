@@ -1,7 +1,4 @@
 @extends("layout.layout")
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <title>Checkout</title>
     <style>
@@ -144,6 +141,6 @@
             console.log('Item removed:', itemId);
         }
     </script>
-
+    
 </body>
 </html>

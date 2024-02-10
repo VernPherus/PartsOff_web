@@ -1,161 +1,142 @@
 @extends("layout.layout")
 <head>
     <title>Parts Off</title>
+    <style>
+        /* Add custom styles for fixed image size */
+        .card-img-top {
+            height: 150px; /* Set the desired height */
+            object-fit: cover; /* Maintain aspect ratio and cover the container */
+        }
+    </style>
 </head>
 
 <body>
     <!--Navbar-->
     @include("layout.navbar")
-
-    <!-- Header Section -->
-    <header class="bg-primary text-white py-1">
-        <div class="container text-center">
-            <h1>Welcome to Parts Off</h1>
-            <p>Explore our content</p>
+    
+    <!-- Card Banner Section -->
+    <div class="container mt-4 ">
+        <div class="card ">
+            <img src="{{ asset('assets/images/banner.gif') }}" class="card-img-top" alt="Banner Image">
         </div>
-    </header>
+    </div>
+    
 
-    <!--
-        *TODO Add rows for the cards, layout properly
-    -->
     <!-- Content Section -->
-    <div class="container mt-5" id="dashboard">
+    <div class="container mt-5 card bg-primary"  id="dashboard">
+        <!-- Just For You Card -->
+        <div class="card m-3">
+            <div class="card-body text-center">
+                <h5 class="card-title">Just For You</h5>
+            </div>
+        </div>
 
-        <!--Header cards-->
-        <div class="row justify-content-md-center">
-
-            <!-- Card 1 -->
-            <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-                <a href="{{ url('/product')  }}" class="card-link">
-                    <div class="card">
-                        <div class="card-body">
-                            <div>
-                                <!-- Add your image with the <img> tag -->
-                                <img src="{{ asset('assets\images\1080.png') }}" alt="GPU Image" class="img-fluid">
+        <!-- Container Card for Product Cards -->
+        <div class="card m-3">
+            <!-- Cards Section -->
+            <div class="card-body">
+                <div class="row no-gutters"> <!-- Remove gutters (left and right margins) -->
+                    <div class="col-lg-2 col-md-4 mb-4">
+                        <a href="{{ url('/product') }}" style="text-decoration:none" class="card-link">
+                            <div class="card">
+                                <img src="{{ asset('assets\images\1080.png') }}" class="card-img-top" alt="NVIDIA GeForce GTX 1080 TI Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">NVIDIA GeForce GTX 1080 TI Founders Edition 11GB GDDR5X Graphic Card</h5>
+                                    <p class="card-text">Price: PHP 19,082.31</p>
+                                    <!-- Add any other details you want to display -->
+                                </div>
                             </div>
-                            <h5 class="card-title">NVIDIA GeForce GTX 1080 TI Founders Edition 11GB GDDR5X Graphic Card</h5>
-                            <h4 class="card-subtitle mb-2">Price:PHP 19,082.31</h4>
-                        </div>
+                        </a>
                     </div>
-                </a>
-            </div>
-
-
-
-            <!-- Card 2 -->
-            <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Title 1</h5>
-                        <h1 class="card-header">Header 1</h1>
-                        <h4 class="card-subtitle mb-2 text-muted">Sub-header 1</h4>
+                    <div class="col-lg-2 col-md-4 mb-4">
+                        <a href="{{ url('/product') }}" style="text-decoration:none" class="card-link">
+                            <div class="card">
+                                <img src="{{ asset('assets\images\alex.jpg') }}" class="card-img-top" alt="NVIDIA GeForce GTX 1080 TI Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">NVIDIA GeForce GTX 1080 TI Founders Edition 11GB GDDR5X Graphic Card</h5>
+                                    <p class="card-text">Price: PHP 19,082.31</p>
+                                    <!-- Add any other details you want to display -->
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Title 1</h5>
-                        <h1 class="card-header">Header 1</h1>
-                        <h4 class="card-subtitle mb-2 text-muted">Sub-header 1</h4>
+                    <div class="col-lg-2 col-md-4 mb-4">
+                        <a href="{{ url('/product') }}" style="text-decoration:none" class="card-link">
+                            <div class="card">
+                                <img src="{{ asset('assets\images\1080.png') }}" class="card-img-top" alt="NVIDIA GeForce GTX 1080 TI Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">NVIDIA GeForce GTX 1080 TI Founders Edition 11GB GDDR5X Graphic Card</h5>
+                                    <p class="card-text">Price: PHP 19,082.31</p>
+                                    <!-- Add any other details you want to display -->
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                </div>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Title 1</h5>
-                        <h1 class="card-header">Header 1</h1>
-                        <h4 class="card-subtitle mb-2 text-muted">Sub-header 1</h4>
-                    </div>
+                    <!-- Add more cards here for a total of 12, or modify the loop accordingly -->
                 </div>
             </div>
         </div>
-
-        <!--Midset A-->
-        <div class="row">
-
-            <div class="col-lg-4 col-md-6 mt-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Title 1</h5>
-                        <img src="{{ asset('assets\images\placeholder_logo.png') }}" class="card-img-top" alt="Image 1">
-                        <h1 class="card-header">Header 1</h1>
-                        <h4 class="card-subtitle mb-2 text-muted">Sub-header 1</h4>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 mt-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Title 1</h5>
-                        <img src="{{ asset('assets\images\placeholder_logo.png') }}" class="card-img-top" alt="Image 1">
-                        <h1 class="card-header">Header 1</h1>
-                        <h4 class="card-subtitle mb-2 text-muted">Sub-header 1</h4>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 mt-4 mb-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Title 1</h5>
-                        <img src="{{ asset('assets\images\placeholder_logo.png') }}" class="card-img-top" alt="Image 1">
-                        <h1 class="card-header">Header 1</h1>
-                        <h4 class="card-subtitle mb-2 text-muted">Sub-header 1</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!--Midset B-->
-        <div class="row">
-
-            <div class="col">
-                <div class="card w-100/">
-                    <div class="card-body">
-                        <h5 class="card-title">Title 1</h5>
-                        <h1 class="card-header">Header 1</h1>
-                        <h4 class="card-subtitle mb-2 text-muted">Sub-header 1</h4>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!--End Cards-->
-        <div class="row mb-4">
-
-            <div class="col-md-8 col-sm-6 mb-md-0 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Title 1</h5>
-                        <img src="{{ asset('assets\images\placeholder_logo.png') }}" class="card-img-top" alt="Image 1">
-                        <h1 class="card-header">Header 1</h1>
-                        <h4 class="card-subtitle mb-2 text-muted">Sub-header 1</h4>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Title 1</h5>
-                        <img src="{{ asset('assets\images\placeholder_logo.png') }}" class="card-img-top" alt="Image 1">
-                        <h1 class="card-header">Header 1</h1>
-                        <h4 class="card-subtitle mb-2 text-muted">Sub-header 1</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
 
-    <!--footer-->
+
+            
+    <!-- Content Section -->
+    <div class="container my-5 card bg-primary" id="dashboard">
+        <!-- Just For You Card -->
+        <div class="card m-3">
+            <div class="card-body text-center">
+                <h5 class="card-title">New Arrival</h5>
+            </div>
+        </div>
+
+        <!-- Container Card for Product Cards -->
+        <div class="card m-3">
+            <!-- Cards Section -->
+            <div class="card-body">
+                <div class="row no-gutters"> <!-- Remove gutters (left and right margins) -->
+                    <div class="col-lg-2 col-md-4 mb-4">
+                        <a href="{{ url('/product') }}" style="text-decoration:none" class="card-link">
+                            <div class="card">
+                                <img src="{{ asset('assets\images\1080.png') }}" class="card-img-top" alt="NVIDIA GeForce GTX 1080 TI Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">NVIDIA GeForce GTX 1080 TI Founders Edition 11GB GDDR5X Graphic Card</h5>
+                                    <p class="card-text">Price: PHP 19,082.31</p>
+                                    <!-- Add any other details you want to display -->
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-4 mb-4">
+                        <a href="{{ url('/product') }}" style="text-decoration:none" class="card-link">
+                            <div class="card">
+                                <img src="{{ asset('assets\images\alex.jpg') }}" class="card-img-top" alt="NVIDIA GeForce GTX 1080 TI Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">NVIDIA GeForce GTX 1080 TI Founders Edition 11GB GDDR5X Graphic Card</h5>
+                                    <p class="card-text">Price: PHP 19,082.31</p>
+                                    <!-- Add any other details you want to display -->
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-4 mb-4">
+                        <a href="{{ url('/product') }}" style="text-decoration:none" class="card-link">
+                            <div class="card">
+                                <img src="{{ asset('assets\images\1080.png') }}" class="card-img-top" alt="NVIDIA GeForce GTX 1080 TI Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">NVIDIA GeForce GTX 1080 TI Founders Edition 11GB GDDR5X Graphic Card</h5>
+                                    <p class="card-text">Price: PHP 19,082.31</p>
+                                    <!-- Add any other details you want to display -->
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Add more cards here for a total of 12, or modify the loop accordingly -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
     @include('layout.footer')
 </body>

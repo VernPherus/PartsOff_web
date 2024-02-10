@@ -36,18 +36,14 @@
                         </a>
                     </li>
 
-                    <!--Profile-->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Profile
+                    <!-- Login/SignUp Button -->
+                    <li class="nav-item d-flex justify-content-center">
+                        <a class="nav-link" href="{{ url('/login') }}">
+                            <button type="button" class="btn btn-outline-primary">Login/SignUp</button>
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="MyAccount.html">Profile</a>
-                            <a class="dropdown-item" href="login.html">Login</a>
-                            <a class="dropdown-item" href="signup.html">Sign Up</a>
-                        </div>
                     </li>
                 </ul>
             </div>
         </div>
-    </nav>
+    </div>
+</nav>
