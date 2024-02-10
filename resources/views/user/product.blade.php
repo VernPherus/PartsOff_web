@@ -1,7 +1,9 @@
-@extends("layout.layout")
+@extends("layouts.app")
+@section('content')
+
 <head>
-  <title>Your Product Name - Shoppe Style</title>
-  <style>
+    <title>Your Product Name - Shoppe Style</title>
+    <style>
         .checkout-card {
             width: 100%;
             margin: auto;
@@ -10,7 +12,8 @@
 
         .cart-items {
             flex: 1;
-            padding-right: 20px; /* Spacing between items and summary */
+            padding-right: 20px;
+            /* Spacing between items and summary */
         }
 
         .item-image {
@@ -41,8 +44,9 @@
         }
     </style>
 </head>
+
 <body>
-    @include('layout.navbar')
+    @include('layouts.navbar')
     <div class="container mt-4" alt="product">
         <div class="card p-3">
             <div class="row">
@@ -61,11 +65,6 @@
 
                     <h3 class="mb-3">Price: $99.99</h3>
 
-                    <div class="mb-3 d-flex justify-content-start">
-                    <labelfor="quantity">Quantity:</label>
-                    <input type="number" id="quantity" class="form-control" value="1" min="1" style="width: 60">
-                    </div>
-                    
                     <a class="nav-link" href="{{ url('/cart') }}">
                         <button class="btn btn-primary btn-block">Add to Cart</button>
                     </a>
@@ -74,7 +73,7 @@
                     </a>
                 </div>
             </div>
-            
+
             <div class="row">
                 <div class="col-md-12 mt-2 text-center">
                     <h3><u>Product Details</u></h3>
@@ -82,7 +81,8 @@
                     <!-- Add more product details as needed -->
                 </div>
             </div>
-        </div>    
+        </div>
     </div>
-    @include('layout.footer')
+    <!--footer-->
+    @include('layouts.footer')
 </body>

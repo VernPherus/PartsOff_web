@@ -1,13 +1,15 @@
-@extends("layout.layout")
+@extends("layouts.app")
+@section('content')
+
 <head>
     <title>Parts Off</title>
 </head>
 
 <body class="bg-primary">
     <!--Navbar-->
-    @include("layout.navbar")
+    @include("layouts.navbar")
 
-    <section style ="margin-bottom: 369px;">
+    <section style="margin-bottom: 369px;">
         <div class="container mt-5 pt-5">
             <div class="row align-items-center">
                 <div class="col-12 col-sm-8 col-md-6 m-auto">
@@ -32,6 +34,7 @@
         </div>
     </section>
 
-    <!--footer-->
-    @include('layout.footer')
 </body>
+<!--footer-->
+@include('layouts.footer')
+@stop

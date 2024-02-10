@@ -1,29 +1,33 @@
-@extends("layout.layout")
+@extends("layouts.app")
+@section('content')
+
 <head>
     <title>Parts Off</title>
     <style>
         /* Add custom styles for fixed image size */
         .card-img-top {
-            height: 150px; /* Set the desired height */
-            object-fit: cover; /* Maintain aspect ratio and cover the container */
+            height: 150px;
+            /* Set the desired height */
+            object-fit: cover;
+            /* Maintain aspect ratio and cover the container */
         }
     </style>
 </head>
 
 <body>
     <!--Navbar-->
-    @include("layout.navbar")
-    
+    @include("layouts.navbar")
+
     <!-- Card Banner Section -->
     <div class="container mt-4 ">
         <div class="card ">
             <img src="{{ asset('assets/images/banner.gif') }}" class="card-img-top" alt="Banner Image">
         </div>
     </div>
-    
+
 
     <!-- Content Section -->
-    <div class="container mt-5 card bg-primary"  id="dashboard">
+    <div class="container mt-5 card bg-primary" id="dashboard">
         <!-- Just For You Card -->
         <div class="card m-3">
             <div class="card-body text-center">
@@ -79,7 +83,7 @@
     </div>
 
 
-            
+
     <!-- Content Section -->
     <div class="container my-5 card bg-primary" id="dashboard">
         <!-- Just For You Card -->
@@ -138,5 +142,5 @@
 
 
     <!-- Footer -->
-    @include('layout.footer')
+    @include('layouts.footer')
 </body>

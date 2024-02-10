@@ -15,65 +15,66 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function(){
-    return view('home');
+    return view('user/home');
 });
 
-Route::get('/admin_dashboard', function(){
-    return view('admin_dashboard');
+Route::get('/dashboard', function(){
+    return view('Admin/dashboard');
 });
 
-Route::get('/admin_userdatabse', function(){
-    return view('Admin/admin_userdatabase');
+Route::get('/order_receiver', function(){
+    return view('Admin/order_receiver');
 });
 
-Route::get('/cart', function(){
-    return view('cart');
+Route::get('/product_database', function(){
+    return view('Admin/product_database');
 });
 
-Route::get('/product', function(){
-    return view('product');
+Route::get('/user_database', function(){
+    return view('Admin/user_database');
 });
 
-Route::get('/checkout', function(){
-    return view('checkout');
+Route::get('/changepassword', function(){
+    return view('auth/changepassword');
 });
 
-Route::get('/admin_dashboard', function(){
-    return view('Admin/admin_dashboard');
-});
-
-// Route::get('/admin_sellerdatabse', function(){
-//     return view('Admin/admin_sellerdatabase');
-// });
-
-Route::get('/admin_userdatabase', function(){
-    return view('Admin/admin_userdatabase');
-});
-
-Route::get('/myacc_order', function(){
-    return view('myacc_order');
-});
-
-Route::get('/seller_product', function(){
-    return view('seller_product');
+Route::get('/login', function(){
+    return view('auth/login');
 });
 
 Route::get('/signup', function(){
-    return view('signup');
+    return view('auth/signup');
 });
 
-Route::get('/user_changepass', function(){
-    return view('user_changepass');
+Route::get('/cart', function(){
+    return view('user/cart');
 });
 
-Route::get('/user_order', function(){
-    return view('user_order');
+Route::get('/checkout', function(){
+    return view('user/checkout');
 });
 
-Route::get('/user_profile', function(){
-    return view('user_profile');
+Route::get('/home', function(){
+    return view('user/home');
 });
 
-Route::get('/user_shipping', function(){
-    return view('user_shipping');
+Route::get('/order', function(){
+    return view('user/order');
 });
+
+Route::get('/product', function(){
+    return view('user/product');
+});
+
+Route::get('/profile', function(){
+    return view('user/profile');
+});
+
+Route::get('/shipping', function(){
+    return view('user/shipping');
+});
+
+
+
+
+
