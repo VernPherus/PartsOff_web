@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,67 +16,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', function(){
-    return view('user/home');
+Route::middleware(['guestOrVerified'])->group(function(){
+    Route::get('/',[ProductController::class, 'index'])->name('home');
+    Route::get('/product/{product::slug}', [ProductController::class, 'view;'])->name('product.view');
+
+    Route::prefix('/cart')->name('cart.')->group(function(){
+        Route::get('/',[\App\Http\Controllers\CartController::class,'index'])->name('index');
+        Route::post('/add/{product:slug}', [\App\Http\Controllers\CartController::class,'add'])->name('add');
+        Route::post('/remove/{product:slug}', [\App\Http\Controllers\CartController::class,'remove'])->name('remove');
+        Route::post('/update-quantity/{product:slug', [\App\Http\Controllers\CartController::class,'updateQuantity'])->name('update-quantity');
+    });
 });
-
-Route::get('/dashboard', function(){
-    return view('Admin/dashboard');
-});
-
-Route::get('/order_receiver', function(){
-    return view('Admin/order_receiver');
-});
-
-Route::get('/product_database', function(){
-    return view('Admin/product_database');
-});
-
-Route::get('/user_database', function(){
-    return view('Admin/user_database');
-});
-
-Route::get('/changepassword', function(){
-    return view('auth/changepassword');
-});
-
-Route::get('/login', function(){
-    return view('auth/login');
-});
-
-Route::get('/signup', function(){
-    return view('auth/signup');
-});
-
-Route::get('/cart', function(){
-    return view('user/cart');
-});
-
-Route::get('/checkout', function(){
-    return view('user/checkout');
-});
-
-Route::get('/home', function(){
-    return view('user/home');
-});
-
-Route::get('/order', function(){
-    return view('user/order');
-});
-
-Route::get('/product', function(){
-    return view('user/product');
-});
-
-Route::get('/profile', function(){
-    return view('user/profile');
-});
-
-Route::get('/shipping', function(){
-    return view('user/shipping');
-});
-
-
 
 
 
