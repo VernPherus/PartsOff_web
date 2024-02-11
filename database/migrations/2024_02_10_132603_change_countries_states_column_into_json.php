@@ -13,7 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        //
+        Schema::table('countries', function (Blueprint $table) {
+            $table->dropColumn('states');
+        });
+        Schema::table('countries', function (Blueprint $table) {
+            $table->json('states')->nullable();
+        });
     }
 
     /**
@@ -23,6 +28,8 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::table('countries', function (Blueprint $table) {
+            $table->longText('states')->nullable()->change();
+        });
     }
 };

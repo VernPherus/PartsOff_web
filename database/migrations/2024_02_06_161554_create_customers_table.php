@@ -19,7 +19,6 @@ return new class extends Migration
             $table->id();
             $table->string('first_name');
             $table->string('last_name');
-            $table->string('gender');
             $table->string('phone')->nullable();
             $table->string('status', 45)->nullable();
             $table->timestamps();
