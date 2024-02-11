@@ -16,6 +16,7 @@ class AuthController extends Controller
             'password' => 'required',
             'remember' => 'boolean'
         ]);
+
         $remember = $credentials['remember'] ?? false;
         unset($credentials['remember']);
         if (!Auth::attempt($credentials, $remember)) {
@@ -49,8 +50,8 @@ class AuthController extends Controller
     {
         /** @var \App\Models\User $user */
         $user = Auth::user();
-        //$user->currentAccessToken()->delete();
-        $user->tokens()->delete();
+        $user->currentAccessToken()->delete();
+        //$user->tokens()->delete();
 
         return response('', 204);
     }

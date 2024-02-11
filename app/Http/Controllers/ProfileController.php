@@ -26,8 +26,8 @@ class ProfileController extends Controller
         $user = $request->user();
         /** @var \App\Models\Customer $customer */
         $customer = $user->customer;
-        $shippingAddress = $customer->shippingAddress ?: new CustomerAddress(['type' => AddressType::Shipping]);
-        $billingAddress = $customer->billingAddress ?: new CustomerAddress(['type' => AddressType::Billing]);
+        // $shippingAddress = $customer->shippingAddress ?: new CustomerAddress(['type' => AddressType::Shipping]);
+        // $billingAddress = $customer->billingAddress ?: new CustomerAddress(['type' => AddressType::Billing]);
 //        dd($customer, $shippingAddress->attributesToArray(), $billingAddress, $billingAddress->customer);
 
         return view('profile.view', compact('customer', 'user', 'shippingAddress', 'billingAddress', 'countries'));
