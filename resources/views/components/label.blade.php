@@ -1,14 +1,5 @@
-@extends('app')
+@props(['value'])
 
-@push('css')
-
-@endpush
-
-@section('content')
-
-@endsection
-
-
-@push('js')
-
-@endpush
+<label {{ $attributes->merge(['class' => 'block font-medium text-sm text-gray-700']) }}>
+    {{ $value ?? $slot }}
+</label>
