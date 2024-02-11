@@ -2,7 +2,12 @@
 
 ---
 
-README file under revision. Please wait.
+## Dependencies
+
+-Vue.js
+-[Tailwind.css](https://tailwindcss.com/docs/guides/vite)
+-Vuex
+-vue-router
 
 ---
 
