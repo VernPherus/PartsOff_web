@@ -4,15 +4,13 @@
         'bg-orange-400': order.status === 'shipped',
         'bg-red-500': order.status === 'cancelled',
         'bg-gray-400': order.status === 'unpaid',
-      }">{{ order.status }}</span>
-  </template>
-  
-  <script setup>
-  const {order} = defineProps({
+    }">{{ order.status }}</span>
+</template>
+
+<script setup>
+const { order } = defineProps({
     order: Object
-  })
-  </script>
-  
-  <style scoped>
-  
-  </style>
+})
+</script>
+
+<style scoped></style>
