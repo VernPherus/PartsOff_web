@@ -1,44 +1,48 @@
 <x-app-layout>
-    <div class="w-[400px] mx-auto my-16">
+    <form
+        action="{{ route('register') }}"
+        method="post"
+        class="w-[400px] mx-auto p-6 my-16"
+    >
+        @csrf
 
-        <h2 class="text-2xl font-semibold text-center mb-5">
-            Enter your new password
-        </h2>
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+        <h2 class="text-2xl font-semibold text-center mb-4">Create an account</h2>
+        <p class="text-center text-gray-500 mb-3">
+            or
+            <a
+                href="{{ route('login') }}"
+                class="text-sm text-purple-700 hover:text-purple-600"
+            >
+                login with existing account
+            </a>
+        </p>
 
-        <form method="POST" action="{{ route('password.update') }}">
-            @csrf
-
-            <!-- Password Reset Token -->
-            <input type="hidden" name="token" value="{{ $request->route('token') }}">
-
-            <!-- Email Address -->
-            <div>
-                <x-label for="email" :value="__('Email')" />
-
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email', $request->email)" required autofocus />
+        @if (session('error'))
+            <div class="py-2 px-3 bg-red-500 text-white mb-2 rounded">
+                {{ session('error') }}
             </div>
+        @endif
 
-            <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
+        <!-- Session Status -->
+        <x-auth-session-status class="mb-4" :status="session('status')"/>
 
-                <x-input id="password" class="block mt-1 w-full" type="password" name="password" required />
-            </div>
+        <div class="mb-4">
+            <x-input placeholder="Your name" type="text" name="name" :value="old('name')" />
+        </div>
+        <div class="mb-4">
+            <x-input placeholder="Your Email" type="email" name="email" :value="old('email')" />
+        </div>
+        <div class="mb-4">
+            <x-input placeholder="Password" type="password" name="password"/>
+        </div>
+        <div class="mb-4">
+            <x-input placeholder="Repeat Password" type="password" name="password_confirmation"/>
+        </div>
 
-            <!-- Confirm Password -->
-            <div class="mt-4">
-                <x-label for="password_confirmation" :value="__('Confirm Password')" />
-
-                <x-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required />
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
-                <x-button>
-                    {{ __('Reset Password') }}
-                </x-button>
-            </div>
-        </form>
-    </div>
+        <button
+            class="btn-primary bg-emerald-500 hover:bg-emerald-600 active:bg-emerald-700 w-full"
+        >
+            Signup
+        </button>
+    </form>
 </x-app-layout>
