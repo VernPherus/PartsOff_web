@@ -50,8 +50,8 @@ class AuthController extends Controller
     {
         /** @var \App\Models\User $user */
         $user = Auth::user();
-        $user->currentAccessToken()->delete();
-        //$user->tokens()->delete();
+        //$user->currentAccessToken()->delete();
+        $user->tokens()->delete();
 
         return response('', 204);
     }
