@@ -71,7 +71,7 @@ class ProfileController extends Controller
 
         DB::commit();
 
-        $request->session()->flash('flash_message', 'Profile was successfully updated.');
+        session()->flash('flash_message', 'Profile was successfully updated.');
 
         return redirect()->route('profile');
 
@@ -87,7 +87,7 @@ class ProfileController extends Controller
         $user->password = Hash::make($passwordData['new_password']);
         $user->save();
 
-        $request->session()->flash('flash_message', 'Your password was successfully updated.');
+        session()->flash('flash_message', 'Your password was successfully updated.');
 
         return redirect()->route('profile');
     }
