@@ -1,13 +1,13 @@
 <script>
-import {defineComponent, h} from 'vue'
-import {Bar} from 'vue-chartjs'
-import {Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale} from 'chart.js'
+import { defineComponent, h } from 'vue'
+import { Bar } from 'vue-chartjs'
+import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from 'chart.js'
 
 ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
 
 export default defineComponent({
   name: 'BarChart',
-  components: {Bar},
+  components: { Bar },
   props: {
     chartId: {
       type: String,
@@ -42,7 +42,7 @@ export default defineComponent({
   },
   setup(props) {
 
-    const chartOptions = {responsive: true}
+    const chartOptions = { responsive: true }
 
     return () =>
       h(Bar, {
