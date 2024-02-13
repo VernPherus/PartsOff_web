@@ -1,4 +1,4 @@
-export default function currencyUSD(value) {
-  return new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'})
+export default function currencyPHP(value) {
+  return new Intl.NumberFormat('fil-PH', {style: 'currency', currency: 'PHP'})
     .format(value);
 }
