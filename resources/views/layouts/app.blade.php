@@ -15,7 +15,7 @@
         }
     </style>
 </head>
-<body>
+<body class="min-height: 100vh;">
 @include('layouts.navigation')
 
 <main class="p-5">
@@ -61,5 +61,6 @@
     </div>
 </div>
 <!--/ Toast -->
+@include('layouts.footer')
 </body>
 </html>

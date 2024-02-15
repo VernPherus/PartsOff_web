@@ -45,5 +45,5 @@
                 Login
             </button>
         </form>
-    </div>    
+    </div>
 </x-app-layout>

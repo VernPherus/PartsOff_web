@@ -4,7 +4,7 @@
         cartItemsCount: {{ \App\Helpers\Cart::getCartItemsCount() }},
     }"
     @cart-change.window="cartItemsCount = $event.detail.count"
-    class="flex justify-between bg-emerald-600 shadow-md text-white"
+    class="flex justify-between bg-purple-800 shadow-md text-white"
 >
     <div>
         <a href="<?php echo route('home'); ?>" class="block py-navbar-item pl-5" style="display: flex; align-items: center; justify-content: center;"><img src='https://i.postimg.cc/52WcXyWy/logosmall.png' style="height: 25px;"></a>
