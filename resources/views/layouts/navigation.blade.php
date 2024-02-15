@@ -7,7 +7,7 @@
     class="flex justify-between bg-slate-700 shadow-md text-white"
 >
     <div>
-        <a href="{{ route('home') }}" class="block py-navbar-item pl-5"> PARTS OFF </a>
+        <a href="{{ route('home') }}" class="block py-navbar-item pl-5"><img src='https://i.postimg.cc/52WcXyWy/logosmall.png'></a>
     </div>
     <!-- Responsive Menu -->
     <div
