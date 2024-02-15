@@ -1,11 +1,8 @@
 <template>
   <div class="min-w-[160px] w-[160px]  transition-all bg-purple-800 text-white py-4 px-2">
-<<<<<<< HEAD
-=======
     <div class="">
       <img src="./assets/logo.png">
     </div>
->>>>>>> 608cd52911dc56c7f3ed20223d3621b4979ddf1d
     <router-link :to="{name: 'app.dashboard'}"
                  class="flex items-center p-2 rounded transition-colors hover:bg-black/30">
       <span class="mr-2 text-gray-300">
@@ -21,7 +18,7 @@
         <ViewListIcon class="w-5"/>
       </span>
       <span class="text-xs">
-        Categories  
+        Categories
       </span>
     </router-link>
     <router-link :to="{name: 'app.products'}"
