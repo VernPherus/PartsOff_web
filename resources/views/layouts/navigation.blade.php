@@ -4,6 +4,7 @@
         cartItemsCount: {{ \App\Helpers\Cart::getCartItemsCount() }},
     }"
     @cart-change.window="cartItemsCount = $event.detail.count"
+<<<<<<< HEAD
     class="flex justify-between bg-emerald-600 shadow-md text-white"
 >
     <div>
@@ -11,6 +12,12 @@
             <img src="https://via.placeholder.com/150" alt="Website Logo" style="height: 50px;"> <!-- ayaw i read ng shit ung file path ko wtf -->
           </a>
 
+=======
+    class="flex justify-between bg-slate-700 shadow-md text-white"
+>
+    <div>
+        <a href="{{ route('home') }}" class="block py-navbar-item pl-5"><img src='https://i.postimg.cc/52WcXyWy/logosmall.png'></a>
+>>>>>>> 608cd52911dc56c7f3ed20223d3621b4979ddf1d
     </div>
     <!-- Responsive Menu -->
     <div
