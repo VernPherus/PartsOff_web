@@ -15,7 +15,7 @@
         <ViewListIcon class="w-5"/>
       </span>
       <span class="text-xs">
-        Categories
+        Categories  
       </span>
     </router-link>
     <router-link :to="{name: 'app.products'}"
