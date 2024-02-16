@@ -21,7 +21,7 @@
             get cartTotal() {
                 return this.cartItems.reduce((accum, next) => accum + next.price * next.quantity, 0).toFixed(2)
             },
-        }" class="bg-white p-4 rounded-lg shadow">
+        }" class="bg-gray p-4 rounded-lg shadow">
             <!-- Product Items -->
             <template x-if="cartItems.length">
                 <div>
@@ -38,7 +38,7 @@
                                     <div class="flex justify-between mb-3">
                                         <h3 x-text="product.title"></h3>
                                         <span class="text-lg font-semibold">
-                                            $<span x-text="product.price"></span>
+                                            ₱<span x-text="product.price"></span>
                                         </span>
                                     </div>
                                     <div class="flex justify-between items-center">
@@ -70,7 +70,7 @@
                     <div class="border-t border-gray-300 pt-4">
                         <div class="flex justify-between">
                             <span class="font-semibold">Subtotal</span>
-                            <span id="cartTotal" class="text-xl" x-text="`$${cartTotal}`"></span>
+                            <span id="cartTotal" class="text-xl" x-text="`₱${cartTotal}`"></span>
                         </div>
                         <p class="text-gray-500 mb-6">
                             Shipping and taxes calculated at checkout.

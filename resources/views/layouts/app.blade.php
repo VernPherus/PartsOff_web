@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel E-commerce Website') }}</title>
+    <title>{{ config('app.name', 'Parts Off') }}</title>
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -15,7 +15,7 @@
         }
     </style>
 </head>
-<body>
+<body class="min-height: 100vh;">
 @include('layouts.navigation')
 
 <main class="p-5">
@@ -61,5 +61,6 @@
     </div>
 </div>
 <!--/ Toast -->
+@include('layouts.footer')
 </body>
 </html>
