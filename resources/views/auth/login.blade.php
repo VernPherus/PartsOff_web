@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="w-96 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-white dark:border-gray-700">
+    <div class="w-96 p-6 bg-gray border border-gray-200 rounded-lg shadow dark:bg-white dark:border-gray-700">
         <form method="POST" action="{{ route('login') }}" class="w-[400px] mx-auto p-6 my-16">
             <h2 class="text-2xl font-semibold text-center mb-5">
                 Login to your account

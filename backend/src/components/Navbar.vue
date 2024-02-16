@@ -5,7 +5,7 @@
       <MenuIcon class="w-6"/>
     </button>
     <Menu as="div" class="relative inline-block text-left">
-      <MenuButton class="flex items-center text-2xl bg-white rounded-lg pl-2">
+      <MenuButton class="flex items-center text-2xl bg-white rounded-lg pl-2 pr-4 py-2 hover:bg-gray-100 active:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 shadow-md transition duration-150 ease-in-out">
         <div>{{currentUser.name}}</div>
         <ChevronDownIcon
           class="h-5 w-5 text-violet-200 hover:text-violet-100"
