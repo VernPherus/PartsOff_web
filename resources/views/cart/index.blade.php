@@ -21,7 +21,7 @@
             get cartTotal() {
                 return this.cartItems.reduce((accum, next) => accum + next.price * next.quantity, 0).toFixed(2)
             },
-        }" class="bg-white p-4 rounded-lg shadow">
+        }" class="bg-gray p-4 rounded-lg shadow">
             <!-- Product Items -->
             <template x-if="cartItems.length">
                 <div>

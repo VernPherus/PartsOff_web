@@ -6199,7 +6199,19 @@
     "packages-dev": [
         {
             "name": "barryvdh/laravel-debugbar",
-            "version": "v3.10.5",
+<<<<<<< HEAD
+            "version": "v3.10.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/barryvdh/laravel-debugbar.git",
+                "reference": "60d3f5d6298a8b23028927302318856e50cbe59b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/barryvdh/laravel-debugbar/zipball/60d3f5d6298a8b23028927302318856e50cbe59b",
+                "reference": "60d3f5d6298a8b23028927302318856e50cbe59b",
+=======
+            "version": "v3.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/barryvdh/laravel-debugbar.git",
@@ -6207,8 +6219,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barryvdh/laravel-debugbar/zipball/d1a48965f2b25a6cec2eea07d719b568a37c9a88",
-                "reference": "d1a48965f2b25a6cec2eea07d719b568a37c9a88",
+                "url": "https://api.github.com/repos/barryvdh/laravel-debugbar/zipball/f390a22e8914f4b1a1daf4a5722d9a34c87a52a0",
+                "reference": "f390a22e8914f4b1a1daf4a5722d9a34c87a52a0",
+>>>>>>> 608cd52911dc56c7f3ed20223d3621b4979ddf1d
                 "shasum": ""
             },
             "require": {
@@ -6267,7 +6280,11 @@
             ],
             "support": {
                 "issues": "https://github.com/barryvdh/laravel-debugbar/issues",
-                "source": "https://github.com/barryvdh/laravel-debugbar/tree/v3.10.5"
+<<<<<<< HEAD
+                "source": "https://github.com/barryvdh/laravel-debugbar/tree/v3.10.2"
+=======
+                "source": "https://github.com/barryvdh/laravel-debugbar/tree/v3.10.0"
+>>>>>>> 608cd52911dc56c7f3ed20223d3621b4979ddf1d
             },
             "funding": [
                 {
@@ -6279,7 +6296,11 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-02-15T10:45:45+00:00"
+<<<<<<< HEAD
+            "time": "2024-02-13T09:14:41+00:00"
+=======
+            "time": "2024-02-12T10:42:32+00:00"
+>>>>>>> 608cd52911dc56c7f3ed20223d3621b4979ddf1d
         },
         {
             "name": "doctrine/instantiator",

@@ -37,10 +37,10 @@ $categoryList = \App\Models\Category::getActiveAsTree();
             type="select"
             name="sort"
             class="w-full focus:border-purple-600 focus:ring-purple-600 border-gray-300 rounded">
-            <option value="price">Price (ASC)</option>
-            <option value="-price">Price (DESC)</option>
-            <option value="title">Title (ASC)</option>
-            <option value="-title">Title (DESC)</option>
+            <option value="price">Price (↑)</option>
+            <option value="-price">Price (↓)</option>
+            <option value="title">Title (↑)</option>
+            <option value="-title">Title (↓)</option>
             <option value="-updated_at">Last Modified at the top</option>
             <option value="updated_at">Last Modified at the bottom</option>
         </x-input>
